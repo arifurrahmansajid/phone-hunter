@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone hunting API practice project</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="md:container md:mx-auto p-5">
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <a class="btn btn-ghost text-2xl">Hot Gadgets</a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="btn  btn-success text-white">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- hero section -->
+        <section class="mt-5">
+            <div class="hero ">
+                <div class="hero-content text-center">
+                    <div class="md:w-[600px] w-full">
+                        <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+                        <p class="py-6"> There are many variations of passages of Lorem Ipsum available, but the
+                            majority have suffered alteration in some form, by injected humou.</p>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="images/bg.png" alt="">
+            </div>
+        </section>
+
+        <!-- search phone section -->
+        <section>
+            <h2 class="text-center text-2xl font-bold">Search your phone </h2>
+            <div class="flex justify-center items-center m-10">
+
+                <input type="text" placeholder="Search here...." id="searchInput"
+                    class="input input-bordered w-full max-w-xs " /> &nbsp;
+                <button onclick="searchButton()" class="btn btn-success text-white">Search</button>
+            </div>
+        </section>
+        <!-- phone display section -->
+        <section>
+            <div id="display-container" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-5">
+
+            </div>
+            <div id="showALlButton" class="flex justify-center items-center p-10 hidden">
+                <button onclick="showAllData()" class="btn btn-danger">Show All</button>
+            </div>
+        </section>
+        <!-- loading spinner -->
+        <section id="loading-spinner" class="text-center hidden">
+            <span class="loading loading-spinner text-neutral"></span>
+        </section>
+
+        <!-- show modal section  -->
+       
+        <section>
+            <!-- You can open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="show_details_modal.showModal()">open modal</button> -->
+            <dialog id="show_details_modal" class="modal">
+
+                <div class="modal-box w-8/12 max-w-5xl">
+                    <div id="show-details-container">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+
+        <footer class="footer p-10 bg-base-200 text-base-content">
+            <nav>
+              <h6 class="footer-title">Services</h6> 
+              <a class="link link-hover">Branding</a>
+              <a class="link link-hover">Design</a>
+              <a class="link link-hover">Marketing</a>
+              <a class="link link-hover">Advertisement</a>
+            </nav> 
+            <nav>
+              <h6 class="footer-title">Company</h6> 
+              <a class="link link-hover">About us</a>
+              <a class="link link-hover">Contact</a>
+              <a class="link link-hover">Jobs</a>
+              <a class="link link-hover">Press kit</a>
+            </nav> 
+            <nav>
+              <h6 class="footer-title">Legal</h6> 
+              <a class="link link-hover">Terms of use</a>
+              <a class="link link-hover">Privacy policy</a>
+              <a class="link link-hover">Cookie policy</a>
+            </nav> 
+            <form>
+              <h6 class="footer-title">Newsletter</h6> 
+              <fieldset class="form-control w-80">
+                <label class="label">
+                  <span class="label-text">Enter your email address</span>
+                </label> 
+                <div class="join">
+                  <input type="text" placeholder="username@site.com" class="input input-bordered join-item" /> 
+                  <button class="btn btn-primary join-item">Subscribe</button>
+                </div>
+              </fieldset>
+            </form>
+          </footer>
+    
+
+
+    <script src="phone.js"></script>
+</body>
+
+</html>
